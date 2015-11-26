@@ -9,8 +9,13 @@
   <tbody>
     <% @stops.each do |stop| %>
       <tr>
-        <td>◦ <%= stop.name%></td>
+        <td>◦ <%= stop.name %></td>
+        <td>| Edit |</td>
+        <td>| Delete |</td>
       </tr>
     <% end %>
+    <tr>
+      <td>+ Add A Stop</td>
+    </tr>
   </tbody>
 </table>

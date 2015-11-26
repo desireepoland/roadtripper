@@ -1,0 +1,21 @@
+<h1><%= @stop.name %></h1>
+
+<% if !@stop.description.empty? %>
+  <p>Description: <%= @stop.description %></p>
+<% end %>
+
+<h3>Activities:</h3>
+<table>
+  <tbody>
+    <% @activities.each do |activity| %>
+      <tr>
+        <td>◦ <%= activity.name %></td>
+        <td>| Edit |</td>
+        <td>| Delete |</td>
+      </tr>
+    <% end %>
+    <tr>
+      <td>+ Add An Activity</td>
+    </tr>
+  </tbody>
+</table>

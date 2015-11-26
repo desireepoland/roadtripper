@@ -9,6 +9,7 @@ class TripsController < ApplicationController
   def show
     id = params[:id]
     @trip = Trip.find(id)
+    @stops = @trip.stops
   end
 
   def new

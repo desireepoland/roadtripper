@@ -3,3 +3,14 @@
 <% if !@trip.description.empty? %>
   <p>Description: <%= @trip.description %></p>
 <% end %>
+
+<h3>Stops:</h3>
+<table>
+  <tbody>
+    <% @stops.each do |stop| %>
+      <tr>
+        <td>◦ <%= stop.name%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

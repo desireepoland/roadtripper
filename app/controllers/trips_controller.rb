@@ -28,7 +28,7 @@ class TripsController < ApplicationController
   end
 
   def create
-    trip = Trip.create(trip_params)
+    Trip.create(trip_params)
     redirect_to trips_path
   end
 

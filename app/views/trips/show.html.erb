@@ -9,7 +9,7 @@
   <tbody>
     <% @stops.each do |stop| %>
       <tr>
-        <td>◦ <%= stop.name %></td>
+        <td>◦ <%= link_to stop.name, trip_stop_path(@trip.id, stop.id)%></td>
         <td>| Edit |</td>
         <td>| Delete |</td>
       </tr>

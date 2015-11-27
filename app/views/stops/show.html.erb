@@ -3,7 +3,7 @@
 <% if !@stop.description.empty? %>
   <p>Description: <%= @stop.description %></p>
 <% end %>
-<p>Trip: <%= @stop.trip.name %></p>
+<p>Trip: <%= link_to @stop.trip.name,  trip_path(@stop.trip_id)%></p>
 
 <h3>Activities:</h3>
 <table>

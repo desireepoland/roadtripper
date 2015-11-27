@@ -1,10 +1,13 @@
-
+<h1>All Trips</h1>
 <table>
   <tbody>
     <% @trips.each do |trip| %>
       <tr>
-        <td><%= link_to trip.name, trip_path(trip.id) %></td>
+        <td>◦ <%= link_to trip.name, trip_path(trip.id) %></td>
       </tr>
     <% end %>
+    <tr>
+      <td>+ Add A Trip</td>
+    </tr>
   </tbody>
 </table>

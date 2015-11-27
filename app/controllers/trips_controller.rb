@@ -43,6 +43,8 @@ class TripsController < ApplicationController
     redirect_to trips_path
   end
 
+  private
+
   def trip_params
     params.require(:trip).permit(:name, :description)
   end

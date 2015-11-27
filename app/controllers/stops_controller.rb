@@ -14,6 +14,11 @@ class StopsController < ApplicationController
   end
 
   def edit
+    @stop = Stop.find(params[:id])
+    @header = "Edit Stop"
+    @action = "update"
+    @method = :patch
+    render "new"
   end
 
   def create
@@ -23,6 +28,10 @@ class StopsController < ApplicationController
   end
 
   def update
+    trip = Trip.find(params[:trip_id])
+    stop = trip.stops.find(params[:id])
+    stop.update(stop_params)
+    redirect_to trip_path(params[:trip_id])
   end
 
   def destroy

@@ -1,0 +1,16 @@
+<h1><%= @header %></h1>
+<%= form_for @stop, url: { action: @action }, method: @method do |f| %>
+    <table>
+      <tbody>
+        <tr>
+          <td><%= f.label :name, "Name:" %></td>
+          <td><%= f.text_field :name %></td>
+        </tr>
+        <tr>
+          <td><%= f.label "Description:" %></td>
+          <td><%= f.text_field :description %></td>
+        </tr>
+      </tbody>
+    </table>
+    <%= f.submit %>
+<% end %>

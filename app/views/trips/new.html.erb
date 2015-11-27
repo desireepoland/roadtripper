@@ -1,14 +1,14 @@
-<h1>Create New Trip</h1>
-<%= form_for @trip do |f| %>
+<h1><%= @header %></h1>
+<%= form_for @trip, url: { action: @action }, method: @method do |f| %>
     <table>
       <tbody>
         <tr>
-          <td><%= f.label :name, "Trip Name:" %></td>
-          <td><%= f.text_field :name %></td>
+          <td><%= f.label :name, "Name:" %></td>
+          <td><%= f.text_area(:name, size: "25x1") %></td>
         </tr>
         <tr>
-          <td><%= f.label "Trip Description:" %></td>
-          <td><%= f.text_field :description %></td>
+          <td><%= f.label "Description:" %></td>
+          <td><%= f.text_area(:description, size: "25x3") %></td>
         </tr>
       </tbody>
     </table>

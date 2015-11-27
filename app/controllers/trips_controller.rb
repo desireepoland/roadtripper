@@ -14,10 +14,17 @@ class TripsController < ApplicationController
 
   def new
     @trip = Trip.new
+    @header = "Create A New Trip"
+    @action = "create"
+    @method = :post
   end
 
   def edit
-
+    @trip = Trip.find(params[:id])
+    @header = "Edit Trip"
+    @action = "update"
+    @method = :patch
+    render "new"
   end
 
   def create
@@ -34,6 +41,6 @@ class TripsController < ApplicationController
   end
 
   def trip_params
-  params.require(:trip).permit(:name, :description)
+    params.require(:trip).permit(:name, :description)
   end
 end

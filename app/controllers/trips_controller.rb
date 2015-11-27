@@ -21,7 +21,8 @@ class TripsController < ApplicationController
   end
 
   def create
-
+    trip = Trip.create(trip_params)
+    redirect_to trips_path
   end
 
   def update
@@ -30,5 +31,9 @@ class TripsController < ApplicationController
 
   def destroy
 
+  end
+
+  def trip_params
+  params.require(:trip).permit(:name, :description)
   end
 end

@@ -3,6 +3,7 @@
 <% if !@trip.description.empty? %>
   <p>Description: <%= @trip.description %></p>
 <% end %>
+<%= link_to "Edit this Trip", edit_trip_path(@trip.id) %>
 
 <h3>Stops:</h3>
 <table>

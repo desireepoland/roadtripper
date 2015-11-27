@@ -33,7 +33,8 @@ class TripsController < ApplicationController
   end
 
   def update
-
+    Trip.update(params[:id], trip_params)
+    redirect_to trip_path(params[:id])
   end
 
   def destroy

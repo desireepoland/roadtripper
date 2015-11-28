@@ -28,6 +28,12 @@ class ActivitiesController < ApplicationController
     redirect_to trip_stop_path(stop.trip_id, stop.id)
   end
 
+  def destroy
+    stop = Stop.find(params[:stop_id])
+    Activity.find(params[:id]).destroy
+    redirect_to trip_stop_path(stop.trip_id, stop.id)
+  end
+
   private
 
   def activity_params

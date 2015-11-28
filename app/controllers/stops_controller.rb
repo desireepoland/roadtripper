@@ -35,6 +35,9 @@ class StopsController < ApplicationController
   end
 
   def destroy
+    trip_id = params[:trip_id]
+    Stop.find(params[:id]).destroy
+    redirect_to trip_path(trip_id)
   end
 
   private

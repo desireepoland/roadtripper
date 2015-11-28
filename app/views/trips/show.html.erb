@@ -14,7 +14,7 @@
       <tr>
         <td>◦ <%= link_to stop.name, trip_stop_path(@trip.id, stop.id) %></td>
         <td><%= link_to "✏︎", edit_trip_stop_path(@trip.id, stop.id) %></td>
-        <td>| Delete |</td>
+        <td><%=link_to "✘", trip_stop_path(@trip.id, stop.id), method: :delete, data: {confirm: "Confirm Deletion"} %></td>
       </tr>
     <% end %>
     <tr>

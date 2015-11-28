@@ -11,7 +11,7 @@
     <% @activities.each do |activity| %>
       <tr>
         <td>◦ <%= activity.name %></td>
-        <td>| Edit |</td>
+        <td><%= link_to "✏︎", edit_trip_stop_activity_path(@stop.trip_id, @stop.id, activity.id) %></td>
         <td>| Delete |</td>
       </tr>
     <% end %>

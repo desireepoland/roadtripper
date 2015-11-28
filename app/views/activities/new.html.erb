@@ -1,0 +1,12 @@
+<h1><%= @header %></h1>
+<%= form_for @activity, url: { action: @action }, method: @method do |f| %>
+    <table>
+      <tbody>
+        <tr>
+          <td><%= f.label :name, "Name:" %></td>
+          <td><%= f.text_field :name %></td>
+        </tr>
+      </tbody>
+    </table>
+    <%= f.submit %>
+<% end %>

@@ -16,7 +16,7 @@
       </tr>
     <% end %>
     <tr>
-      <td>+ Add An Activity</td>
+      <td><%= link_to "+ Add An Activity", new_trip_stop_activity_path(@stop.trip_id, @stop.id) %></td>
     </tr>
   </tbody>
 </table>

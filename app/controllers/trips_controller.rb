@@ -1,5 +1,6 @@
 class TripsController < ApplicationController
   def home
+    @not_home = false
   end
 
   def index

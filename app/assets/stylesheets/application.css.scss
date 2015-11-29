@@ -17,32 +17,56 @@
    text-align: center;
    margin: 0 auto;
    font-family: 'Alegreya Sans', sans-serif;
-   color: #1E1D21;
+   color: #3B4245;
    background-image: linear-gradient(
-      rgba(0, 0, 0, 0.2),
-      rgba(0, 0, 0, 0.2)
-    ), image-url("treeroad.jpeg");
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.1)
+    ), image-url("cityroad.jpeg");
    background-size: cover;
    background-attachment: fixed;
+   font-size: 18px;
+ }
+ nav a{
+   color: #0D4A34;
+  //  background-color: rgba(249, 254, 254, 0.5);
+   font-size: 40px;
+   padding: 40px;
  }
  h1 {
-   font-family: 'Old Standard TT', serif;
-   font-size: 40px;
-   padding-top: 20px;
+   font-family: 'Playfair Display', serif;
+   font-size: 45px;
+   margin-top: 40px;
+   border-bottom: 1px solid #C9C9C9;
+   border-top: 1px solid #C9C9C9;
+   display: inline-block;
+ }
+ .hometitle{
+   font-size: 70px;
+   margin: 150px auto;
  }
  table {
    text-align: left;
-   margin: 0 auto;
-   border: 1px solid grey;
+   margin: 20px auto 0px;
+   border: 1px solid #B1B8BA;
    border-spacing: 20px;
  }
  section {
    width: 80%;
    margin: 0 auto;
    padding-bottom: 40px;
-   background-color: rgba(249, 254, 254, 0.8);
+   background-color: rgba(249, 254, 254, 0.9);
    min-height: 350px;
  }
  a {
    text-decoration: none;
+   color: #1F7354;
  }
+ // footer {
+ //   position: fixed;
+ //   bottom: 0;
+ //   height: 30px;
+ //   font-size: 16px;
+ //   color: #FEFEF9;
+ //   text-align: left;
+ //   width: 100%;
+ // }

@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css'>
   <title>Road Trip Planner</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <nav>
+      <% if @not_home != false %>
+        <%= link_to '<i class="fa fa-home"></i>'.html_safe, root_path %>
+      <% else %>
+        <br><br>
+      <% end %>
+    </nav>
+  </header>
+  <section>
+    <%= yield %>
+  </section>
 
-<section>
-  <%= yield %>
-</section>
+  <!-- <footer>
+    <span>© 2015 Desiree Poland</span>
+  </footer> -->
 
 </body>
 </html>

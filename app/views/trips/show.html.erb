@@ -1,7 +1,7 @@
 <h1><%= @trip.name %></h1>
 
-<%= link_to "|Edit Trip|", edit_trip_path(@trip.id) %>
-<%=link_to "|Delete Trip|", trip_path(@trip.id), method: :delete, data: {confirm: "Confirm Deletion"} %>
+<%= link_to "✐", edit_trip_path(@trip.id) %>
+<%=link_to "☒", trip_path(@trip.id), method: :delete, data: {confirm: "Confirm Deletion"} %>
 
 <% if !@trip.description.empty? %>
   <p>Description: <%= @trip.description %></p>
@@ -12,12 +12,12 @@
   <tbody>
     <% @stops.each do |stop| %>
       <tr>
-        <td>◦ <%= link_to stop.name, trip_stop_path(@trip.id, stop.id) %></td>
+        <td><%= link_to stop.name, trip_stop_path(@trip.id, stop.id) %></td>
         <td><%= link_to "✏︎", edit_trip_stop_path(@trip.id, stop.id) %></td>
-        <td><%=link_to "✘", trip_stop_path(@trip.id, stop.id), method: :delete, data: {confirm: "Confirm Deletion"} %></td>
+        <td><%=link_to "☒", trip_stop_path(@trip.id, stop.id), method: :delete, data: {confirm: "Confirm Deletion"} %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 <br>
-<%= link_to "+ Add A Stop", new_trip_stop_path(@trip.id) %>
+<%= link_to "+ Add A Destination", new_trip_stop_path(@trip.id) %>

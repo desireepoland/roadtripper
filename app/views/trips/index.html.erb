@@ -4,8 +4,7 @@
     <% @trips.each do |trip| %>
       <tr>
         <td><%= link_to trip.name, trip_path(trip.id) %></td>
-        <td><%= link_to "✏︎", edit_trip_path(trip.id) %></td>
-        <td><%=link_to "✘", trip_path(trip.id), method: :delete, data: {confirm: "Confirm Deletion"} %></td>
+        <td><%=link_to "☒", trip_path(trip.id), method: :delete, data: {confirm: "Confirm Deletion"} %></td>
       </tr>
     <% end %>
   </tbody>

@@ -44,6 +44,10 @@ class TripsController < ApplicationController
     redirect_to trips_path
   end
 
+  def select
+    redirect_to trip_path(params[:trip][:id])
+  end
+
   private
 
   def trip_params

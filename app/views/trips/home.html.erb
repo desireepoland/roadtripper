@@ -1,5 +1,13 @@
 <h1 class="hometitle">Go Somewhere</h1>
-<br>
-<%= link_to "+ Create A Trip", new_trip_path %>
+
+<h3>View A Trip</h3>
+<%= form_tag select_trip_path, method: :get do %>
+      <%= collection_select(:trip, :id, Trip.all, :id, :name, prompt: "Select One:") %>
+      <br>
+      <%= submit_tag "View Trip" %>
+  <% end %>
 <br><br>
+
+<%= link_to "+ Create A Trip", new_trip_path %>
+<br>
 <%= link_to "View All Trips", trips_path %>

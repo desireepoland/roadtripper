@@ -1,6 +1,7 @@
-Rails.application.routes.draw do
+ Rails.application.routes.draw do
 
   root 'trips#home'
+  get 'trips/select' => 'trips#select', as: :select_trip
 
   resources :trips do
     resources :stops do

@@ -15,6 +15,11 @@
         <td><%=link_to "☒", trip_stop_activity_path(@stop.trip_id, @stop.id, activity.id), method: :delete, data: {confirm: "Confirm Deletion"} %></td>
       </tr>
     <% end %>
+    <% if @activities.count == 0 %>
+      <tr>
+        <td>There are currently no activities for this destination.</td>
+      </tr>
+    <% end %>
   </tbody>
 </table>
 <br>

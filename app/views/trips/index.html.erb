@@ -8,8 +8,7 @@
         <td><%=link_to "✘", trip_path(trip.id), method: :delete, data: {confirm: "Confirm Deletion"} %></td>
       </tr>
     <% end %>
-    <tr>
-      <td><%= link_to "+ Create A Trip", new_trip_path %></td>
-    </tr>
   </tbody>
 </table>
+<br>
+<%= link_to "+ Create A Trip", new_trip_path %>

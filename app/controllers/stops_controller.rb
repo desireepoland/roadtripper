@@ -8,14 +8,14 @@ class StopsController < ApplicationController
 
   def new
     @stop = Stop.new
-    @header = "Add A New Stop"
+    @header = "Add A New Destination"
     @action = "create"
     @method = :post
   end
 
   def edit
     @stop = Stop.find(params[:id])
-    @header = "Edit Stop"
+    @header = "Edit Destination"
     @action = "update"
     @method = :patch
     render "new"

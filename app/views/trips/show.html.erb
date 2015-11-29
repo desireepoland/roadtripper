@@ -1,13 +1,13 @@
 <h1><%= @trip.name %></h1>
 
-<%= link_to "Edit Trip", edit_trip_path(@trip.id) %>
-<%=link_to "Delete Trip", trip_path(@trip.id), method: :delete, data: {confirm: "Confirm Deletion"} %>
+<%= link_to "|Edit Trip|", edit_trip_path(@trip.id) %>
+<%=link_to "|Delete Trip|", trip_path(@trip.id), method: :delete, data: {confirm: "Confirm Deletion"} %>
 
 <% if !@trip.description.empty? %>
   <p>Description: <%= @trip.description %></p>
 <% end %>
 
-<h3>Stops:</h3>
+<h3>Destinations:</h3>
 <table>
   <tbody>
     <% @stops.each do |stop| %>
@@ -17,8 +17,7 @@
         <td><%=link_to "✘", trip_stop_path(@trip.id, stop.id), method: :delete, data: {confirm: "Confirm Deletion"} %></td>
       </tr>
     <% end %>
-    <tr>
-      <td><%= link_to "+ Add A Stop", new_trip_stop_path(@trip.id) %></td>
-    </tr>
   </tbody>
 </table>
+<br>
+<%= link_to "+ Add A Stop", new_trip_stop_path(@trip.id) %>

@@ -13,11 +13,36 @@
  *= require_tree .
  *= require_self
  */
- body{
+ body {
    text-align: center;
    margin: 0 auto;
    font-family: 'Alegreya Sans', sans-serif;
+   color: #1E1D21;
+   background-image: linear-gradient(
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ), image-url("treeroad.jpeg");
+   background-size: cover;
+   background-attachment: fixed;
  }
- h1{
+ h1 {
    font-family: 'Old Standard TT', serif;
+   font-size: 40px;
+   padding-top: 20px;
+ }
+ table {
+   text-align: left;
+   margin: 0 auto;
+   border: 1px solid grey;
+   border-spacing: 20px;
+ }
+ section {
+   width: 80%;
+   margin: 0 auto;
+   padding-bottom: 40px;
+   background-color: rgba(249, 254, 254, 0.8);
+   min-height: 350px;
+ }
+ a {
+   text-decoration: none;
  }

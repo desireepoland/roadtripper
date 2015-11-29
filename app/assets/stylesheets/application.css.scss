@@ -59,6 +59,8 @@
    padding-bottom: 40px;
    background-color: rgba(249, 254, 254, 0.9);
    min-height: 350px;
+   max-height: 450px;
+   overflow: scroll;
  }
  a {
    text-decoration: none;
@@ -67,12 +69,13 @@
  a:hover {
    color: #C42D50;
  }
- // footer {
- //   position: fixed;
- //   bottom: 0;
- //   height: 30px;
- //   font-size: 16px;
- //   color: #FEFEF9;
- //   text-align: left;
- //   width: 100%;
- // }
+ footer {
+   position: fixed;
+   bottom: 0;
+   top: auto;
+   height: 30px;
+   font-size: 16px;
+   color: #FEFEF9;
+   text-align: left;
+   width: 100%;
+ }

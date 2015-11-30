@@ -10,12 +10,13 @@ class StopsController < ApplicationController
   def new
     @stop = Stop.new
     @header = "Add A New Destination"
+    render "form"
   end
 
   def edit
     @stop = Stop.find(params[:id])
     @header = "Edit Destination"
-    render "new"
+    render "form"
   end
 
   def create

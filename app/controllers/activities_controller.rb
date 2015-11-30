@@ -5,6 +5,7 @@ class ActivitiesController < ApplicationController
     @stop = Stop.find(params[:stop_id])
     @activity = Activity.new
     @header = "Add A New Activity"
+    render "form"
   end
 
   def edit
@@ -12,7 +13,7 @@ class ActivitiesController < ApplicationController
     @stop = Stop.find(params[:stop_id])
     @activity = Activity.find(params[:id])
     @header = "Edit Activity"
-    render "new"
+    render "form"
   end
 
   def create

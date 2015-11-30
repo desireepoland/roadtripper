@@ -16,12 +16,13 @@ class TripsController < ApplicationController
   def new
     @trip = Trip.new
     @header = "Create A New Trip"
+    render "form"
   end
 
   def edit
     @trip = Trip.find(params[:id])
     @header = "Edit Trip"
-    render "new"
+    render "form"
   end
 
   def create

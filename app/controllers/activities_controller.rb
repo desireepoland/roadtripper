@@ -1,17 +1,17 @@
 class ActivitiesController < ApplicationController
 
   def new
+    @trip = Trip.find(params[:trip_id])
+    @stop = Stop.find(params[:stop_id])
     @activity = Activity.new
     @header = "Add A New Activity"
-    @action = "create"
-    @method = :post
   end
 
   def edit
+    @trip = Trip.find(params[:trip_id])
+    @stop = Stop.find(params[:stop_id])
     @activity = Activity.find(params[:id])
     @header = "Edit Activity"
-    @action = "update"
-    @method = :patch
     render "new"
   end
 

@@ -1,4 +1,5 @@
 class StopsController < ApplicationController
+  before_action :find_trip, only: [:new, :edit]
 
   def show
     id = params[:id]
@@ -9,15 +10,11 @@ class StopsController < ApplicationController
   def new
     @stop = Stop.new
     @header = "Add A New Destination"
-    @action = "create"
-    @method = :post
   end
 
   def edit
     @stop = Stop.find(params[:id])
     @header = "Edit Destination"
-    @action = "update"
-    @method = :patch
     render "new"
   end
 
@@ -41,6 +38,10 @@ class StopsController < ApplicationController
   end
 
   private
+
+  def find_trip
+    @trip = Trip.find(params[:trip_id])
+  end
 
   def stop_params
     params.require(:stop).permit(:name, :description)

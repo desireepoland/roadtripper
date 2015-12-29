@@ -51,8 +51,31 @@ RSpec.describe TripsController, type: :controller do
       }
     end
 
-    it "redirects to the show view" do
+    it "redirects to the trips index view" do
       post :create, trip_params
+      expect(subject).to redirect_to trips_path
+    end
+  end
+
+  describe "PATCH 'update'" do
+    let(:trip_params) do
+      {
+        trip: {
+          name: "Ski Trip",
+          description: "Snow!"
+        }
+      }
+    end
+
+    it "redirects to the show view" do
+      patch :update, { id: trip.id, trip: trip_params }
+      expect(subject).to redirect_to trip_path
+    end
+  end
+
+  describe "DELETE 'destroy'" do
+    it "redirects to the index view for trips" do
+      delete :destroy, id: trip.id
       expect(subject).to redirect_to trips_path
     end
   end

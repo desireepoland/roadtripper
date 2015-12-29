@@ -34,4 +34,27 @@ RSpec.describe TripsController, type: :controller do
     end
   end
 
+  describe "GET #edit" do
+    it "renders the edit view" do
+      get :edit, id: trip.id
+      expect(subject).to render_template :form
+    end
+  end
+
+  describe "POST 'create'" do
+    let(:trip_params) do
+      {
+        trip: {
+          name: "Spring Break",
+          description: "Somewhere on a nice beach"
+        }
+      }
+    end
+
+    it "redirects to the show view" do
+      post :create, trip_params
+      expect(subject).to redirect_to trips_path
+    end
+  end
+
 end

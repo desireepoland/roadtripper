@@ -80,4 +80,26 @@ RSpec.describe TripsController, type: :controller do
     end
   end
 
+  describe "GET #select" do
+    let(:trip) do
+      Trip.create(name: "Road Trip", description: "This is gonna be awesome")
+    end
+
+    let(:params) do
+      {
+      trip: {
+        id: "1",
+        name: "A Trip",
+        description: "Going on a trip"
+        }
+      }
+    end
+
+    it "redirects to the show view for the trip that was selected" do
+      trip_id = params[:trip][:id]
+      get :select, trip: { id: trip_id }
+      expect(subject).to redirect_to trip_path(params[:trip][:id])
+    end
+  end
+
 end
